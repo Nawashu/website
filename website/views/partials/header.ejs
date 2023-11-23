@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+    <link rel="icon" href="assets/logo.png">
+
+    <script src="scripts/mobile.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <title><%= bot.user.username %> - Discord Bot ❤</title>
+</head>
+
+<body>
+    <header>
+        <nav id="nav" class="row">
+            <div class="title row">
+                <p>Nawashu</p>
+            </div>
+            <div class="nav-links row">
+                <a href="https://top.gg/bot/774014360980815903/vote">Vote</a>
+                <a href="https://discord.com/oauth2/authorize?client_id=774014360980815903&permissions=8&scope=bot%20applications.commands">Invite</a>
+                <a href="https://discord.gg/JA4b3pDYZF">Support</a>
+                <a href="">Partenaires</a>
+            </div>
+            <div class="burger">
+                <div class="btn not-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="nav-burger column">
+            <a href="https://top.gg/bot/774014360980815903/vote">Vote</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=774014360980815903&permissions=8&scope=bot%20applications.commands">Invite</a>
+            <a href="https://discord.gg/JA4b3pDYZF">Support</a>
+            <a href="">Partenaires</a>
+        </div>
+        <script>
+            var btn = $('.btn');
+    
+            btn.on('click', function() {
+                $(this).toggleClass('active not-active');
+                document.getElementById('nav').classList.toggle('active')
+                document.getElementsByClassName('nav-burger')[0].classList.toggle('active');
+            });
+        </script>

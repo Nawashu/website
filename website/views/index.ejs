@@ -1,0 +1,126 @@
+<%- include("partials/header") %>
+        <div class="center-header column">
+            <img src="assets/logo.png" alt="Nawashu Logo">
+            <br>
+            <h1>Nawashu</h1>
+            <p>A Discord Bot With New Content</p>
+            <br>
+            <div class="row buttons-header">
+                <a class="button-header green" href="https://discord.com/oauth2/authorize?client_id=774014360980815903&permissions=8&scope=bot%20applications.commands">Add Me</a>
+                <a class="button-header blue" href="https://discord.gg/JA4b3pDYZF">Discord</a>
+            </div>
+        </div>
+        <div class="managers">
+            <div class="manager row">
+                <div class="manager-class column">
+                    <p class="class-title"><%= users %>K <i class="fa-solid fa-users" style="color: #212529;"></i></p>
+                    <p>Users</p>
+                </div>
+                <div class="manager-class column">
+                    <p class="class-title"><%= guilds %>K <i class="fa-solid fa-server" style="color: #212529;"></i></p>
+                    <p>Guilds</p>
+                </div>
+                <div class="manager-class column">
+                    <p class="class-title"><%= images %> <i class="fa-solid fa-image" style="color: #212529;"></i></p>
+                    <p>Images</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="presentation" class="presentation">
+            <div class="box animation">
+                <img src="assets/hentai.png" alt="">
+                <div>
+                    <h1>Hentai Command</h1>
+                    <br>
+                    <p>You can admire more than 23 categories, and more than <%= images %> images. These images are chosen and used by the community, so why wait?</p>
+                    <br>
+                    <a class="button-header blue" href="https://discord.com/oauth2/authorize?client_id=774014360980815903&permissions=8&scope=bot%20applications.commands">Add Me</a>
+                </div>
+            </div>
+            <div class="box animation">
+                <div>
+                    <h1>Doujins Command</h1>
+                    <br>
+                    <p>You will be able to read all your best doujins from Hitomi.la and Nhentai but directly on discord with many possible settings for your greatest pleasure.</p>
+                </div>
+                <img src="assets/doujins.png" alt="">
+            </div>
+            <div class="box animation">
+                <img src="assets/autopost.png" alt="">
+                <div>
+                    <h1>AutoPost</h1>
+                    <br>
+                    <p>By using the premium benefits you will receive a random image from our collection every 15min on your server.</p>
+                    <br>
+                    <a class="button-header orange" href="https://www.patreon.com/Nawashu">Get Premium</a>
+                </div>
+            </div>
+            <div class="box animation">
+                <div>
+                    <h1>Roleplay Commands</h1>
+                    <br>
+                    <p>For even more fun and roleplay on your server we offer a whole range of rp commands.</p>
+                </div>
+                <img src="assets/kiss.png" alt="">
+            </div>
+        </div>
+        <div class="servers-top">
+            <h1>Joins The Different Communities With Nawashu</h1>
+            <div class="servers row">
+                <div class="server animation">
+                    <img src="<%= guildsTop[0].guild.iconURL %>" alt="">
+                    <div class="data">
+                        <p><%= guildsTop[0].guild.name %></p>
+                        <p class="nb"><%= guildsTop[0].members %> members</p>
+                    </div>
+                </div>
+                <div class="server animation">
+                    <img src="<%= guildsTop[1].guild.iconURL %>" alt="">
+                    <div class="data">
+                        <p><%= guildsTop[1].guild.name %></p>
+                        <p class="nb"><%= guildsTop[1].members %> members</p>
+                    </div>
+                </div>
+                <div class="server animation">
+                    <img src="<%= guildsTop[2].guild.iconURL %>" alt="">
+                    <div class="data">
+                        <p><%= guildsTop[2].guild.name %></p>
+                        <p class="nb"><%= guildsTop[2].members %> members</p>
+                    </div>
+                </div>
+                <div class="server animation">
+                    <img src="<%= guildsTop[3].guild.iconURL %>" alt="">
+                    <div class="data">
+                        <p><%= guildsTop[3].guild.name %></p>
+                        <p class="nb"><%= guildsTop[3].members %> members</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <div style="height: 30vh;"></div>
+        <div class="support column">
+            <h1>Join The Support</h1>
+            <p>you want to be kept up to date with news / updates, have you found a bug or maybe you have a question ?</p>
+            <p>So join us by clicking the button below.</p>
+            <a class="button-header blue" href="https://discord.gg/JA4b3pDYZF">Join Support</a>
+            <br>
+            <br>
+            <br>
+            <widgetbot
+                server="1082062947540545638"
+                channel="1082085758590009355"
+                width=50%
+                height=60vh
+            ></widgetbot>
+        </div>
+    </main>
+    <script src="/scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+        new Crate({
+            server: '1082062947540545638',
+            channel: '1082085758590009355'
+        })
+    </script>
+<%- include("partials/footer") %>
